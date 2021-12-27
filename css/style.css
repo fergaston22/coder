@@ -1,0 +1,251 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+nav{
+    background: #070707;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logo{
+    height: 40px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #fff;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+li a.active, li a:hover{
+    background: #cec32a;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+section{
+    background: url(../image/burger-4829526_1920.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: calc(100vh - 80px);
+}
+#fondo{
+    padding: 0 60px;
+    background-image: url(../image/MC.jpg);
+    height: 85vh;
+    
+    background-size:cover;
+    background-position: center;
+}
+.contenido-banner{
+    position: relative;
+    height: 100%;
+    display: flex;
+    color:white;
+    flex-direction: column;
+   justify-content: center;
+}
+.contenido-banner h3{
+    
+    font-size: 50px;
+    font-weight: 50;
+    padding: 50px 0px;
+}
+.gallery-section{
+    width: 100%;
+    padding: 60px 0;
+    background: #f1f1f1;
+}
+
+.inner-width{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.gallery-section h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.border{
+    width: 180px;
+    height: 4px;
+    background: rgb(5, 0, 0);
+    margin: 60px auto;
+}
+
+.gallery-section .gallery{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+.gallery-section .image{
+    flex: 25%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-section .image img{
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+
+.gallery-section .image:hover img{
+    transform: scale(1.4) rotate(15deg);
+}
+.container-form {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    
+  }
+  .container-form h2 {
+    color: rgb(4, 0, 0);
+    margin-bottom: 15px;
+    font-size: 35px;
+  }
+  .container-form p {
+    color:black;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .container-form a {
+    font-size: 17px;
+    display: inline-block;
+    text-decoration:rgb(68, 28, 28);
+    width: 100%;
+    margin-bottom: 15px;
+    color: rgb(43, 37, 51);
+    font-weight: 700;
+  }
+  .container-form a i {
+    color: rgb(19, 2, 2);
+    margin-right: 10px;
+  }
+  .container-form form .campo,
+  textarea {
+    width: 100%;
+    padding: 20px 2px;
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+  }
+  .container-form form textarea {
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+  }
+  .container-form .btn-enviar {
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: rgb(33, 32, 31);
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+  .container-form .btn-enviar:hover {
+    background:rgb(22, 46, 30);
+  }
+  
+ :root {
+    --mycolor: rgb(255,0,140)
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+}
+@media screen and (max-width:960px) {
+    .gallery-section .image{
+        flex: 33.33%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .gallery-section .image{
+        flex: 50%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .gallery-section .image{
+        flex: 100%;
+    }
+}
